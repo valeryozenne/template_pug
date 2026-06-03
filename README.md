@@ -5,7 +5,7 @@ Ce dépôt contient les templates projet utilisés pour personnaliser le fronten
 Templates disponibles :
 
 - `smartheat`
-- `oplat`
+- `opla`
 - `thermolyse`
 
 

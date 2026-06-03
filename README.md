@@ -8,7 +8,6 @@ Templates disponibles :
 - `oplat`
 - `thermolyse`
 
-Le template à appliquer est choisi avec la variable d’environnement : `PROJECT_TEMPLATE/`
 
 Chaque projet contient :
 - `views/` : composants frontend personnalisés (`frontPageView.js`)

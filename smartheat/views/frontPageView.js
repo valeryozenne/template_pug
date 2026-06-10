@@ -13,51 +13,83 @@ import {
 import '@girder/core/stylesheets/body/frontPage.styl';
 
 const PROJECT = {
-    "title": "SmartHeat",
-    "subtitle": "Smart tools for medical imaging workflows",
-    "short": "AI-ready workspace for medical imaging, data processing and visualization tools.",
-    "icon": "🧠",
+    "title": "SMART-HEAT",
+    "subtitle": "Spatial Mapping and Analysis of Real-time MRI Thermometry for Highly Efficient liver tumor Ablation using inverse Thermal modelling",
+    "short": "Combining experimental MR-based temperature mapping and an inverse modeling approach for visualizing the thermal response.",
+    "icon": "🔥",
     "logo": "/project-logos/smart_it.png",
     "themeClass": "g-smartit-theme",
-    "anr": "Internal platform",
-    "anrLink": "#",
-    "grant": "Research software environment",
-    "duration": "Continuous development",
-    "coordinator": "CRMSB / iMRT environment",
-    "about": "Smart IT centralizes medical imaging data, AI-assisted workflows and scientific visualization tools in a single Girder-based research environment. It is designed to support several project-specific platforms while keeping a shared technical foundation.",
-    "mission": "Offer a reusable frontend structure for imaging projects, processing tools, dashboards and secure collaboration.",
-    "partners": [
+    "anr": "ANR-24-CE92-0073",
+    "anrLink": "https://anr.fr/Projet-ANR-24-CE92-0073",
+    "grant": "Projet-ANR-24-CE92-0073",
+    "duration": "2025-2027",
+    "coordinator": "Jean-Luc Battaglia / Max Seidensticker",
+    "about": "SMART-HEAT is a multidisciplinary project involving teams in Munich and Bordeaux with complementary expertise in interventional radiology, MRI thermometry, and inverse thermal modeling.",
+    "mission": "SMART-HEAT aims at providing an objective therapeutic end-point based on quantitative, rapid, and spatially resolved thermal imaging.",
+    "partners": [        
         {
-            "name": "CRMSB",
-            "role": "Research environment",
-            "logo": "/project-logos/crmsb.png"
+            "name": "Université de Munich",
+            "role": "",
+            "logo": "/project-logos/lmu.png"
         },
         {
             "name": "Université de Bordeaux",
-            "role": "Academic partner",
+            "role": "",
             "logo": "/project-logos/universite_bordeaux.png"
         },
         {
+            "name": "CRMSB",
+            "role": "Centre de Résonance Magnétique des Systèmes Biologiques",
+            "logo": "/project-logos/crmsb.png"
+        },
+        {
+            "name": "I2M",
+            "role": "Institut de mécanique et d'ingénierie",
+            "logo": "/project-logos/I2M.jpg"
+        },
+        {
             "name": "CNRS",
-            "role": "Research partner",
+            "role": "Centre national de la recherche scientifique",
             "logo": "/project-logos/cnrs.png"
         },
         {
             "name": "ANR / France 2030",
-            "role": "Research funding ecosystem",
+            "role": "Agence nationale de la recherche",
             "logo": "/project-logos/france2030.jpg"
-        }
-    ],
-    "competencies": [
-        {
-            "icon": "🤖",
-            "title": "AI workflows",
-            "text": "Prepare data and workflows for intelligent processing tools."
         },
         {
+            "name": "DFG",
+            "role": "Deutsche Forschungsgemeinschaft",
+            "logo": "/project-logos/DFG.png"
+        }
+
+    ],
+    "competencies": [  
+        {
+            "icon": "🏥",
+            "title": "Therapy and thermoablation procedure ",
+            "text": "   "
+        }, 
+        {
+            "icon": "🧲",
+            "title": "MRI workflow ",
+            "text": "  "
+        },
+             
+        {
             "icon": "🗂️",
-            "title": "Mauvaise Data organization",
+            "title": "Data organization",
             "text": "Manage files, collections and project workspaces."
+        },
+        {
+            "icon": "🤖",
+            "title": "Personalized data integration ",
+            "text": "Prepare data and workflows using advanced processing tools."
+        },
+        {
+            "icon": "💻",
+            "title": "Numerical thermal simulation",
+            "text": "One base system adapted to multiple research projects."
         },
         {
             "icon": "🛠️",
@@ -73,11 +105,6 @@ const PROJECT = {
             "icon": "📊",
             "title": "Dashboards",
             "text": "Provide project-level views of data and activities."
-        },
-        {
-            "icon": "🤝",
-            "title": "Reusable platform",
-            "text": "One base system adapted to multiple research projects."
         }
     ],
     "work": [
@@ -255,8 +282,41 @@ const FrontPageView = View.extend({
                         <p class="g-section-lead">${PROJECT.about}</p>
                         <div class="g-info-grid">
                             <div class="g-info-pill"><strong>Mission</strong><span>${PROJECT.mission}</span></div>
-                            <div class="g-info-pill"><strong>Platform</strong><span>Girder-based repository for project datasets, collaborative work and visualization tools.</span></div>
-                            <div class="g-info-pill"><strong>Access</strong><span>Authentication, groups and collections are kept from the official Girder workflow.</span></div>
+                            <div class="g-info-pill"><strong>Objective 1</strong><span>Improve the planning of thermal ablation therapy and the optimization and personalization of device settings by providing personalized modeling of the temperature field prior to ablation.</span></div>
+                            <div class="g-info-pill"><strong>Objective 2</strong><span>Improve the safety of online monitoring and the prediction of the lesion size through improved real-time sub-voxel visualization of the treatment response.</span></div>
+                        </div>
+                    </section>
+
+                    <section class="g-dashboard-section">
+                        <h2>Contacts</h2>
+                        <div class="g-contact-alert">
+                            For any questions about the ${PROJECT.title} platform, please contact the project team.
+                        </div>
+
+                        <div class="g-contact-grid">
+                            <div class="g-contact-card">
+                                <strong>Valéry Ozenne</strong>
+                                <span>Project Coordinator</span>
+                                <a href="mailto:valery.ozenne@u-bordeaux.fr">valery.ozenne@u-bordeaux.fr</a>
+                            </div>
+
+                            <div class="g-contact-card">
+                                <strong>Support Team</strong>
+                                <span>Technical Support</span>
+                                <a href="mailto:support@u-bordeaux.fr">support@u-bordeaux.fr</a>
+                            </div>
+
+                            <div class="g-contact-card">
+                                <strong>Support Team</strong>
+                                <span>Technical Support</span>
+                                <a href="mailto:support@u-bordeaux.fr">support@u-bordeaux.fr</a>
+                            </div>
+
+                            <div class="g-contact-card">
+                                <strong>Support Team</strong>
+                                <span>Technical Support</span>
+                                <a href="mailto:support@u-bordeaux.fr">support@u-bordeaux.fr</a>
+                            </div>
                         </div>
                     </section>
 
@@ -289,7 +349,7 @@ const FrontPageView = View.extend({
                             <div class="g-section-icon">🏢</div>
                             <h2>${translate('About the platform')}</h2>
                         </div>
-                        <p class="g-section-lead">This interface keeps the page structure used in the previous Vicky prototype while making the visual identity cleaner, more project-oriented and reusable across Thermolyse, OPLA and Smart IT.</p>
+                        <p class="g-section-lead">Girder is a free and open source web-based data management platform, developed by Kitware. We would like to thanks all co-workers from IHU-Liryc and CRMSB that help us to improve the design and tools including: Julien Castelneau, Andony Arriela, Vigneshwar Gurunathan, Eya Ben Amor and the Kitware team in Lyon.</p>
                     </section>
                 </div>
             </div>
@@ -340,26 +400,7 @@ const FrontPageView = View.extend({
                             <p>${translate('Launch interactive visualization tools.')}</p>
                         </a>
                     </section>
-                    <section class="g-dashboard-section">
-                        <h2>Contacts</h2>
-                        <div class="g-contact-alert">
-                            For any questions about the ${PROJECT.title} platform, please contact the project team.
-                        </div>
-
-                        <div class="g-contact-grid">
-                            <div class="g-contact-card">
-                                <strong>Valéry Ozenne</strong>
-                                <span>Project Coordinator</span>
-                                <a href="mailto:valery.ozenne@u-bordeaux.fr">valery.ozenne@u-bordeaux.fr</a>
-                            </div>
-
-                            <div class="g-contact-card">
-                                <strong>Support Team</strong>
-                                <span>Technical Support</span>
-                                <a href="mailto:support@u-bordeaux.fr">support@u-bordeaux.fr</a>
-                            </div>
-                        </div>
-                    </section>
+                   
 
                     <section class="g-dashboard-section">
                         <h2>Quick Stats</h2>

@@ -56,7 +56,7 @@ const PROJECT = {
         },
         {
             "icon": "🗂️",
-            "title": "Data organization",
+            "title": "Mauvaise Data organization",
             "text": "Manage files, collections and project workspaces."
         },
         {
@@ -156,11 +156,22 @@ const FrontPageView = View.extend({
 
             setLanguage(nextLanguage);
             this.render();
+        },
+        // --- CAROUSEL ---
+        'click .g-carousel-prev': function () {
+            this._carouselGoTo(this._carouselIdx - 1);
+        },
+        'click .g-carousel-next': function () {
+            this._carouselGoTo(this._carouselIdx + 1);
+        },
+        'click .g-carousel-dot': function (e) {
+            this._carouselGoTo(parseInt($(e.currentTarget).data('idx')));
         }
     },
 
     initialize: function () {
         cancelRestRequests('fetch');
+        this._carouselIdx = 0;
         $('body').addClass('g-landing-page-active');
         this.render();
     },
@@ -212,6 +223,30 @@ const FrontPageView = View.extend({
                         </aside>
                     </section>
 
+                    <section class="g-section g-section-carousel">
+                    <div class="g-section-header">
+                        <div class="g-section-icon">🖼️</div>
+                        <h2>${translate('Gallery')}</h2>
+                    </div>
+                    <div class="g-carousel">
+                        <button class="g-carousel-btn g-carousel-prev">&#8249;</button>
+                        <div class="g-carousel-track-wrap">
+                            <div class="g-carousel-track">
+                                <div class="g-carousel-slide"><img src="/project-images/image1.png" alt="image 1" /></div>
+                                <div class="g-carousel-slide"><img src="/project-images/image2.png" alt="image 2" /></div>
+                                <div class="g-carousel-slide"><img src="/project-images/image3.png" alt="image 3" /></div>
+                            </div>
+                        </div>
+                        <button class="g-carousel-btn g-carousel-next">&#8250;</button>
+                        <div class="g-carousel-dots">
+                            <span class="g-carousel-dot g-dot-active" data-idx="0"></span>
+                            <span class="g-carousel-dot" data-idx="1"></span>
+                            <span class="g-carousel-dot" data-idx="2"></span>
+                        </div>
+                    </div>
+                    </section>
+
+                    
                     <section class="g-section">
                         <div class="g-section-header">
                             <div class="g-section-icon">📌</div>
@@ -259,7 +294,7 @@ const FrontPageView = View.extend({
                 </div>
             </div>
         `);
-
+        
         return this;
     },
 
@@ -348,6 +383,14 @@ const FrontPageView = View.extend({
         `);
 
         return this;
+    },
+
+    _carouselGoTo: function (idx) {
+    const total = 3;
+    this._carouselIdx = ((idx % total) + total) % total;
+    this.$('.g-carousel-track').css('transform', `translateX(-${this._carouselIdx * 100}%)`);
+    this.$('.g-carousel-dot').removeClass('g-dot-active');
+    this.$('.g-carousel-dot[data-idx="' + this._carouselIdx + '"]').addClass('g-dot-active');
     },
 
     destroy: function () {

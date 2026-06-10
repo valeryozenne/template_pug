@@ -14,7 +14,7 @@ import '@girder/core/stylesheets/body/frontPage.styl';
 
 const PROJECT = {
     "title": "OPLA",
-    "subtitle": "Optimal MR Protocol for monitoring SVD patients at low magnetic field",
+    "subtitle": "Optimal ultrasfat Protocol for monitoring SVD patients at low magnetic field",
     "short": "Low-field MRI protocol workspace for SVD monitoring and clinical research.",
     "icon": "🧲",
     "logo": "/project-logos/opla.png",

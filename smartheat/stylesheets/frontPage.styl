@@ -537,3 +537,75 @@
 .g-dashboard-shell .g-project-container
   max-width 1180px
   margin 0 auto
+
+
+.g-carousel
+  position relative
+  display flex
+  align-items center
+  gap 12px
+
+.g-carousel-track-wrap
+  flex 1
+  overflow hidden
+  border-radius 18px
+  border 1px solid var(--border)
+
+.g-carousel-track
+  display flex
+  transition transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)
+
+.g-carousel-slide
+  min-width 100%
+
+  img
+    width 100%
+    display block
+    object-fit contain
+    max-height 480px
+    background #f1f5f9
+
+.g-carousel-btn
+  flex-shrink 0
+  width 42px
+  height 42px
+  border-radius 50%
+  border 1px solid var(--border)
+  background white
+  color var(--primary)
+  font-size 26px
+  font-weight 300
+  cursor pointer
+  display flex
+  align-items center
+  justify-content center
+  box-shadow 0 4px 14px var(--shadow)
+  transition all 0.18s ease
+  line-height 1
+
+  &:hover
+    background var(--primary)
+    color white
+    transform scale(1.08)
+
+.g-carousel-dots
+  position absolute
+  bottom -22px
+  left 50%
+  transform translateX(-50%)
+  display flex
+  gap 8px
+
+.g-carousel-dot
+  width 8px
+  height 8px
+  border-radius 50%
+  background var(--border)
+  cursor pointer
+  transition all 0.2s ease
+
+&.g-dot-active
+    background var(--secondary)
+    width 22px
+    border-radius 999px
+  

@@ -23,7 +23,7 @@ const PROJECT = {
     "anrLink": "https://anr.fr/Projet-ANR-24-CE92-0073",
     "grant": "Projet-ANR-24-CE92-0073",
     "duration": "2025-2027",
-    "coordinator": "Jean-Luc Battaglia / Max Seidensticker",
+    "coordinator": "Max Seidensticker / Jean-Luc Battaglia",
     "about": "SMART-HEAT is a multidisciplinary project involving teams in Munich and Bordeaux with complementary expertise in interventional radiology, MRI thermometry, and inverse thermal modeling.",
     "mission": "SMART-HEAT aims at providing an objective therapeutic end-point based on quantitative, rapid, and spatially resolved thermal imaging.",
     "partners": [        
@@ -295,28 +295,88 @@ const FrontPageView = View.extend({
 
                         <div class="g-contact-grid">
                             <div class="g-contact-card">
+                                <strong>Max Seidensticker</strong>
+                                <span>Project Coordinator in Munich</span>
+                                <a href="mailto:@med.uni-muenchen.de">@med.uni-muenchen.de</a>
+                             </div>
+
+                            <div class="g-contact-card">
+                                <strong>Jean-Luc Battaglia</strong>
+                                <span>Project Coordinator in Bordeaux</span>
+                                <a href="lala@lmu">lala@lmu</a>
+                            </div>
+
+                            <div class="g-contact-card">
+                                <strong>Olaf Dietrich</strong>
+                                <span></span>
+                                <a href="mailto:@med.uni-muenchen.de">@med.uni-muenchen.de</a>
+                            </div>
+
+                            <div class="g-contact-card">
                                 <strong>Valéry Ozenne</strong>
-                                <span>Project Coordinator</span>
-                                <a href="mailto:valery.ozenne@u-bordeaux.fr">valery.ozenne@u-bordeaux.fr</a>
+                                <span></span>
+                                <a href="mailto:@u-bordeaux.fr">support@u-bordeaux.fr</a>
                             </div>
 
                             <div class="g-contact-card">
-                                <strong>Support Team</strong>
-                                <span>Technical Support</span>
+                                <strong>Luigi Nardone</strong>
+                                <span></span>
                                 <a href="mailto:support@u-bordeaux.fr">support@u-bordeaux.fr</a>
                             </div>
 
                             <div class="g-contact-card">
-                                <strong>Support Team</strong>
-                                <span>Technical Support</span>
+                                <strong>Mingming Wu</strong>
+                                <span></span>
                                 <a href="mailto:support@u-bordeaux.fr">support@u-bordeaux.fr</a>
                             </div>
 
                             <div class="g-contact-card">
-                                <strong>Support Team</strong>
-                                <span>Technical Support</span>
+                                <strong>"Matthias PD Fabritius</strong>
+                                <span></span>
                                 <a href="mailto:support@u-bordeaux.fr">support@u-bordeaux.fr</a>
                             </div>
+
+                            <div class="g-contact-card">
+                                <strong>Laura Bauer </strong>
+                                <span></span>
+                                <a href="mailto:support@u-bordeaux.fr">support@u-bordeaux.fr</a>
+                            </div>
+
+                            <div class="g-contact-card">
+                                <strong>Vannessa </strong>
+                                <span></span>
+                                <a href="mailto:support@u-bordeaux.fr">support@u-bordeaux.fr</a>
+                            </div>
+
+                            <div class="g-contact-card">
+                                <strong>Nino Avetikovi</strong>                                
+                                <a href=PhD Student at CRMSB>PhD Student</a>
+                            </div>
+                            
+                            <div class="g-contact-card">
+                                <strong>Ida Burgers</strong>
+                                <span></span>
+                                <a href=PhD Student>PhD Student</a>
+                            </div>
+
+                            <div class="g-contact-card">
+                                <strong>Manon Desclides</strong>
+                                <span></span>
+                                <a href="mailto:support@u-bordeaux.fr">@u-bordeaux.fr</a>
+                            </div>  
+                            
+                            <div class="g-contact-card">
+                                <strong>Eya </strong>
+                                <span></span>
+                                <a href="mailto:support@u-bordeaux.fr">@u-bordeaux.fr</a>
+                            </div> 
+
+                            <div class="g-contact-card">
+                                <strong>Hippolyte </strong>
+                                <span></span>
+                                <a href="mailto:support@u-bordeaux.fr">@u-bordeaux.fr</a>
+                            </div> 
+
                         </div>
                     </section>
 

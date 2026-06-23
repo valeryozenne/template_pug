@@ -27,25 +27,45 @@ const PROJECT = {
     "about": "THERMOLYSE develops MRI thermal mapping methods to measure weak, slow and diffuse brain temperature changes during long heat-stress periods. The platform supports experimental MRI data organization, thermal map processing, reproducibility workflows and collaborative review.",
     "mission": "Create a collaborative workspace for MRI experiments, thermal mapping, metrology, processing results and visualization workflows.",
     "partners": [
+                {
+            "name": "Université d’Angers",
+            "role": "",
+            "logo": "/project-logos/universite_angers.png"
+        },
+        {
+            "name": "Université de Bordeaux",
+            "role": "",
+            "logo": "/project-logos/universite_bordeaux.png"
+        },
+        {
+            "name": "Prism",
+            "role": "Centre de Résonance Magnétique des Systèmes Biologiques",
+            "logo": "/project-logos/logo_prism.png"
+        },
+        {
+            "name": "MitoVasc",
+            "role": "Centre de Résonance Magnétique des Systèmes Biologiques",
+            "logo": "/project-logos/Mitovasc.jpg"
+        },
         {
             "name": "CRMSB",
             "role": "Centre de Résonance Magnétique des Systèmes Biologiques",
             "logo": "/project-logos/crmsb.png"
         },
         {
-            "name": "Université d’Angers",
-            "role": "ICAT / MITOVASC project partners",
-            "logo": "/project-logos/universite_angers.png"
-        },
-        {
             "name": "CNRS",
-            "role": "Research partner",
+            "role": "Centre national de la recherche scientifique",
             "logo": "/project-logos/cnrs.png"
         },
         {
-            "name": "ANR / France 2030",
-            "role": "Funding framework",
-            "logo": "/project-logos/france2030.jpg"
+            "name": "ANR",
+            "role": "Agence Nationale de la Recherche",
+            "logo": "/project-logos/anr.jpg"
+        },
+        {
+            "name": "France 2023",
+            "role": "",
+            "logo": "/project-logos/Logo_France_2030.png"
         }
     ],
     "competencies": [
@@ -156,11 +176,22 @@ const FrontPageView = View.extend({
 
             setLanguage(nextLanguage);
             this.render();
+        },
+        // --- CAROUSEL ---
+        'click .g-carousel-prev': function () {
+            this._carouselGoTo(this._carouselIdx - 1);
+        },
+        'click .g-carousel-next': function () {
+            this._carouselGoTo(this._carouselIdx + 1);
+        },
+        'click .g-carousel-dot': function (e) {
+            this._carouselGoTo(parseInt($(e.currentTarget).data('idx')));
         }
     },
 
     initialize: function () {
         cancelRestRequests('fetch');
+        this._carouselIdx = 0;
         $('body').addClass('g-landing-page-active');
         this.render();
     },
@@ -194,24 +225,56 @@ const FrontPageView = View.extend({
 
                     <section class="g-hero">
                         <div>
-                            <span class="g-hero-kicker">${PROJECT.icon} ${PROJECT.anr}</span>
+                             <!-- <span class="g-hero-kicker">${PROJECT.icon} ${PROJECT.anr}</span> -->
                             <h1>${PROJECT.title}</h1>
                             <p>${PROJECT.subtitle}</p>
                             <div class="g-hero-buttons">
-                                <button class="g-hero-button g-access-platform-btn">${translate('Access the platform')}</button>
                                 <a class="g-hero-button g-hero-button-alt" href="${PROJECT.anrLink}" target="_blank" rel="noreferrer">${translate('Learn More')}</a>
+                                <button class="g-hero-button g-access-platform-btn">${translate('Direct access to the platform')}</button>
                             </div>
                         </div>
 
                         <aside class="g-hero-card">
                             <img class="g-hero-project-logo" src="${PROJECT.logo}" alt="${PROJECT.title} logo" />
-                            <div class="g-meta-line">🏷️ <span>${PROJECT.anr}</span></div>
+                            <!-- <div class="g-meta-line">🏷️ <span>${PROJECT.anr}</span></div> -->
                             <div class="g-meta-line">👤 <span>${PROJECT.coordinator}</span></div>
                             <div class="g-meta-line">📅 <span>${PROJECT.duration}</span></div>
-                            <div class="g-meta-line">💶 <span>${PROJECT.grant}</span></div>
+                            <div class="g-meta-line">💶 <span>${PROJECT.anr}</span></div>
                         </aside>
                     </section>
 
+                    <section class="g-section g-section-carousel">
+                    <div class="g-section-header">
+                        <div class="g-section-icon">🖼️</div>
+                        <h2>${translate('Gallery')}</h2>
+                    </div>
+                    <div class="g-carousel">
+                        <button class="g-carousel-btn g-carousel-prev">&#8249;</button>
+                        <div class="g-carousel-track-wrap">
+                            <div class="g-carousel-track">
+                                <div class="g-carousel-slide"><img src="/project-images/image0.png" alt="image 0" /></div>
+                                <div class="g-carousel-slide"><img src="/project-images/image1.png" alt="image 1" /></div>
+                                <div class="g-carousel-slide"><img src="/project-images/image2.png" alt="image 2" /></div>
+                                <div class="g-carousel-slide"><img src="/project-images/image3.png" alt="image 3" /></div>
+                                <div class="g-carousel-slide"><img src="/project-images/image4.png" alt="image 4" /></div>
+                                <div class="g-carousel-slide"><img src="/project-images/image5.png" alt="image 5" /></div>
+                                <div class="g-carousel-slide"><img src="/project-images/image6.png" alt="image 6" /></div>
+                            </div>
+                        </div>
+                        <button class="g-carousel-btn g-carousel-next">&#8250;</button>
+                        <div class="g-carousel-dots">
+                            <span class="g-carousel-dot g-dot-active" data-idx="0"></span>
+                            <span class="g-carousel-dot" data-idx="1"></span>
+                            <span class="g-carousel-dot" data-idx="2"></span>
+                            <span class="g-carousel-dot" data-idx="3"></span>
+                            <span class="g-carousel-dot" data-idx="4"></span>
+                            <span class="g-carousel-dot" data-idx="5"></span>
+                            <span class="g-carousel-dot" data-idx="6"></span>
+                        </div>
+                    </div>
+                    </section>
+
+                    
                     <section class="g-section">
                         <div class="g-section-header">
                             <div class="g-section-icon">📌</div>
@@ -223,6 +286,39 @@ const FrontPageView = View.extend({
                             <div class="g-info-pill"><strong>Platform</strong><span>Girder-based repository for project datasets, collaborative work and visualization tools.</span></div>
                             <div class="g-info-pill"><strong>Access</strong><span>Authentication, groups and collections are kept from the official Girder workflow.</span></div>
                         </div>
+                    </section>
+
+                     <!-- NOUVELLE SECTION AVEC PHOTOS -->
+                    <section class="g-dashboard-section">
+                    <h2>Contacts</h2>
+                    <div class="g-contact-alert">For any questions about the ${PROJECT.title} platform, please contact the project team. </div>
+                    <div class="g-contact-grid-v2">
+                        ${[
+                        { name: "Florence Franconi", role: "Project partner in Angers at Prism", email: "@", photo: "default.png" },
+                        { name: "Cesar Mattei", role: "Project partner in Angers at MitoVasc", email: "@", photo: "default.png" },
+                        { name: "Valéry Ozenne", role: "Project coordinator in Bordeaux at CRMSB", email: "@u-bordeaux.fr", photo: "default.png" },
+                        { name: "Guy Lenaers", role: "Researcher in Angers at MitoVasc", email: "@u-bordeaux.fr", photo: "default.png" },
+                        { name: "Laurent Lemaire", role: "Researcher in Angers at MitoVasc", email: "@u-bordeaux.fr", photo: "default.png" },
+                        { name: "Gwendal Durand-Chatton", role: "PhD in Angers at CRMSB", email: "@u-bordeaux.fr", photo: "default.png" },
+                        { name: "Malory Couchaud", role: "Post-doc in Angers at CRMSB", email: "@u-bordeaux.fr", photo: "default.png" },
+                        { name: "Jennifer Bourreau", role: "PhD in Angers at CRMSB", email: "@u-bordeaux.fr", photo: "default.png" },
+                        { name: "Mélanie Lagadec", role: "Post-doc in Bordeaux at CRMSB", email: "@u-bordeaux.fr", photo: "default.png" },
+                        { name: "Aurélien Trotier", role: "Engineer in Bordeaux at CRMSB", email: "@u-bordeaux.fr", photo: "default.png" },
+                        { name: "Emeline Ribot", role: "Researcher in Bordeaux at CRMSB", email: "@u-bordeaux.fr", photo: "default.png" },
+                        { name: "Eya Ben Amor", role: "Intern in Bordeaux", email: "@u-bordeaux.fr", photo: "default.png" },
+                        
+
+                        ].map(contact => `
+                        <div class="g-contact-card-v2">
+                            <div class="g-contact-photo-v2">
+                            <img src="/project-photo/${contact.photo}" alt="${contact.name} photo" onerror="this.src='/project-photo/default.png';">
+                            </div>
+                            <strong>${contact.name}</strong>
+                            ${contact.role ? `<span class="g-contact-role-v2">${contact.role}</span>` : ''}
+                            <a href="mailto:${contact.email}" class="g-contact-email-v2">${contact.email}</a>
+                        </div>
+                        `).join('')}
+                    </div>
                     </section>
 
                     <section class="g-section">
@@ -254,7 +350,7 @@ const FrontPageView = View.extend({
                             <div class="g-section-icon">🏢</div>
                             <h2>${translate('About the platform')}</h2>
                         </div>
-                        <p class="g-section-lead">This interface keeps the page structure used in the previous Vicky prototype while making the visual identity cleaner, more project-oriented and reusable across Thermolyse, OPLA and Smart IT.</p>
+                        <p class="g-section-lead">We would like to thanks all co-workers from IHU-Liryc and CRMSB that help us to make the online service available: Maxime Sermesant, Julien Castelneau, Andony Arriela,  Vigneshwar Gurunathan as well as the Kitware team in Lyon. The current version has been developed by Eya Ben Amor, Henri Valeins and Valéry Ozenne and is based on Girder, a free and open source web-based data management platform, developed by Kitware.</p>
                     </section>
                 </div>
             </div>
@@ -305,27 +401,7 @@ const FrontPageView = View.extend({
                             <p>${translate('Launch interactive visualization tools.')}</p>
                         </a>
                     </section>
-                
-                    <section class="g-dashboard-section">
-                        <h2>Contacts</h2>
-                        <div class="g-contact-alert">
-                            For any questions about the ${PROJECT.title} platform, please contact the project team.
-                        </div>
-
-                        <div class="g-contact-grid">
-                            <div class="g-contact-card">
-                                <strong>Valéry Ozenne</strong>
-                                <span>Project Coordinator</span>
-                                <a href="mailto:valery.ozenne@u-bordeaux.fr">valery.ozenne@u-bordeaux.fr</a>
-                            </div>
-
-                            <div class="g-contact-card">
-                                <strong>Support Team</strong>
-                                <span>Technical Support</span>
-                                <a href="mailto:support@u-bordeaux.fr">support@u-bordeaux.fr</a>
-                            </div>
-                        </div>
-                    </section>
+                   
 
                     <section class="g-dashboard-section">
                         <h2>Quick Stats</h2>
@@ -350,6 +426,14 @@ const FrontPageView = View.extend({
         `);
 
         return this;
+    },
+
+    _carouselGoTo: function (idx) {
+    const total = 7;
+    this._carouselIdx = ((idx % total) + total) % total;
+    this.$('.g-carousel-track').css('transform', `translateX(-${this._carouselIdx * 100}%)`);
+    this.$('.g-carousel-dot').removeClass('g-dot-active');
+    this.$('.g-carousel-dot[data-idx="' + this._carouselIdx + '"]').addClass('g-dot-active');
     },
 
     destroy: function () {

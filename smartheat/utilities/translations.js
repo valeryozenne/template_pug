@@ -18,7 +18,8 @@ const translations = {
         'Key competencies': 'Compétences clés',
         'Consortium & partners': 'Consortium & partenaires',
         'Research workpackages': 'Axes de travail',
-        'About the platform': 'À propos de la plateforme'
+        'About the platform': 'À propos de la plateforme',
+        'SMART-HEAT is a multidisciplinary project involving teams in Munich and Bordeaux with complementary expertise in interventional radiology, MRI thermometry, and inverse thermal modeling.': 'ceci est une descritpion du projet en français'
     },
     german: {
         'Login': 'Anmelden',
@@ -39,7 +40,8 @@ const translations = {
         'Key competencies': 'Kernkompetenzen',
         'Consortium & partners': 'Konsortium & Partner',
         'Research workpackages': 'Arbeitspakete',
-        'About the platform': 'Über die Plattform'
+        'About the platform': 'Über die Plattform',
+        'SMART-HEAT is a multidisciplinary project involving teams in Munich and Bordeaux with complementary expertise in interventional radiology, MRI thermometry, and inverse thermal modeling.': 'ceci est une descritpion du projet en allemande'
     }
 };
 

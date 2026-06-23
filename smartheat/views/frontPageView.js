@@ -21,9 +21,9 @@ const PROJECT = {
     "themeClass": "g-smartit-theme",
     "anr": "ANR-24-CE92-0073",
     "anrLink": "https://anr.fr/Projet-ANR-24-CE92-0073",
-    "appLink": "https://incredibleAppForThermoablationPlanning",
+    "appLink": "https://incredible-App-For-Thermoablation-Planning",
     "grant": "Projet-ANR-24-CE92-0073",
-    "duration": "2025-2027",
+    "duration": "January 2024 - 36 months",
     "coordinator": "Max Seidensticker - Jean-Luc Battaglia",
     "about": "SMART-HEAT is a multidisciplinary project involving teams in Munich and Bordeaux with complementary expertise in interventional radiology, MRI thermometry, and inverse thermal modeling.",
     "mission": "SMART-HEAT aims at providing an objective therapeutic end-point based on quantitative, rapid, and spatially resolved thermal imaging.",
@@ -54,14 +54,19 @@ const PROJECT = {
             "logo": "/project-logos/cnrs.png"
         },
         {
-            "name": "ANR / France 2030",
-            "role": "Agence nationale de la recherche",
-            "logo": "/project-logos/france2030.jpg"
+            "name": "ANR",
+            "role": "Agence Nationale de la Recherche",
+            "logo": "/project-logos/anr.jpg"
         },
         {
             "name": "DFG",
             "role": "Deutsche Forschungsgemeinschaft",
             "logo": "/project-logos/DFG.png"
+        },
+        {
+            "name": "France 2023",
+            "role": "",
+            "logo": "/project-logos/Logo_France_2030.png"
         }
 
     ],
@@ -237,14 +242,14 @@ const FrontPageView = View.extend({
                             <p>${PROJECT.subtitle}</p>
                             <div class="g-hero-buttons">
                                 <a class="g-hero-button g-hero-button-alt" href="${PROJECT.anrLink}" target="_blank" rel="noreferrer">${translate('Learn More')}</a>
-                                <button class="g-hero-button g-access-platform-btn">${translate('Access the database (restricted)')}</button>
-                                <a class="g-hero-button g-hero-button-alt" href="${PROJECT.appLink}" target="_blank" rel="noreferrer">${translate('Direct access to the planning App (restricted)')}</a>
+                                <button class="g-hero-button g-access-platform-btn">${translate('Access the database ')}</button>
+                                <a class="g-hero-button g-hero-button-alt" href="${PROJECT.appLink}" target="_blank" rel="noreferrer">${translate('Direct access to the planning App ')}</a>
                             </div>
                         </div>
 
                         <aside class="g-hero-card">
                             <img class="g-hero-project-logo" src="${PROJECT.logo}" alt="${PROJECT.title} logo" />
-                            <div class="g-meta-line">👤 <span>${PROJECT.coordinator}</span></div>
+                            <div class="g-meta-line">🤝 <span>${PROJECT.coordinator}</span></div>
                             <div class="g-meta-line">📅 <span>${PROJECT.duration}</span></div>
                             <div class="g-meta-line">💶 <span>${PROJECT.anr }</span></div>
                         </aside>
@@ -385,7 +390,7 @@ const FrontPageView = View.extend({
                             <div class="g-section-icon">🏢</div>
                             <h2>${translate('About the platform')}</h2>
                         </div>
-                        <p class="g-section-lead">We would like to thanks all co-workers from IHU-Liryc and CRMSB that help us to make the online service available: Maxime Sermesant, Julien Castelneau, Andony Arriela, Vigneshwar Gurunathan. The current version has been developed by Eya Ben Amor, Henri Valeins and Valéry Ozenne and is based on Girder, a free and open source web-based data management platform, developed by Kitware.</p>
+                        <p class="g-section-lead">We would like to thanks all co-workers from IHU-Liryc and CRMSB that help us to make the online service available: Maxime Sermesant, Julien Castelneau, Andony Arriela and Vigneshwar Gurunathan as well as the Kitware team in Lyon. The current version has been developed by Eya Ben Amor, Henri Valeins and Valéry Ozenne and is based on Girder, a free and open source web-based data management platform, developed by Kitware.</p>
                     </section>
                 </div>
             </div>

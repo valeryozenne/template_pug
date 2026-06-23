@@ -21,6 +21,7 @@ const PROJECT = {
     "themeClass": "g-thermolyse-theme",
     "anr": "ANR-25-CE19-6299",
     "anrLink": "https://anr.fr/Projet-ANR-25-CE19-6299",
+    "appLink": "https://incredible-App-For-ThermoRegulation",
     "grant": "ANR funding: 346,577 €",
     "duration": "January 2026 · 24 months",
     "coordinator": "Valéry Ozenne · CRMSB",
@@ -230,8 +231,9 @@ const FrontPageView = View.extend({
                             <p>${PROJECT.subtitle}</p>
                             <div class="g-hero-buttons">
                                 <a class="g-hero-button g-hero-button-alt" href="${PROJECT.anrLink}" target="_blank" rel="noreferrer">${translate('Learn More')}</a>
-                                <button class="g-hero-button g-access-platform-btn">${translate('Direct access to the platform')}</button>
-                            </div>
+                                <button class="g-hero-button g-access-platform-btn">${translate('Access to the database')}</button>
+                                <a class="g-hero-button g-hero-button-alt" href="${PROJECT.appLink}" target="_blank" rel="noreferrer">${translate('Direct access to the App ')}</a>
+                                </div>
                         </div>
 
                         <aside class="g-hero-card">

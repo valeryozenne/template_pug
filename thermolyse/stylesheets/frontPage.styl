@@ -538,3 +538,157 @@
 .g-dashboard-shell .g-project-container
   max-width 1180px
   margin 0 auto
+
+
+.g-carousel
+  position relative
+  display flex
+  align-items center
+  gap 12px
+
+.g-carousel-track-wrap
+  flex 1
+  overflow hidden
+  border-radius 18px
+  border 1px solid var(--border)
+
+.g-carousel-track
+  display flex
+  transition transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)
+
+.g-carousel-slide
+  min-width 100%
+
+  img
+    width 100%
+    display block
+    object-fit contain
+    max-height 480px
+    background #f1f5f9
+
+.g-carousel-btn
+  flex-shrink 0
+  width 42px
+  height 42px
+  border-radius 50%
+  border 1px solid var(--border)
+  background white
+  color var(--primary)
+  font-size 26px
+  font-weight 300
+  cursor pointer
+  display flex
+  align-items center
+  justify-content center
+  box-shadow 0 4px 14px var(--shadow)
+  transition all 0.18s ease
+  line-height 1
+
+  &:hover
+    background var(--primary)
+    color white
+    transform scale(1.08)
+
+.g-carousel-dots
+  position absolute
+  bottom -22px
+  left 50%
+  transform translateX(-50%)
+  display flex
+  gap 8px
+
+.g-carousel-dot
+  width 8px
+  height 8px
+  border-radius 50%
+  background var(--border)
+  cursor pointer
+  transition all 0.2s ease
+
+&.g-dot-active
+    background var(--secondary)
+    width 22px
+    border-radius 999px
+  
+
+
+
+/* ===== NOUVEAUX STYLES POUR LA SECTION AVEC PHOTOS (AGRANDIS) ===== */
+
+.g-contact-grid-v2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.g-contact-card-v2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 25px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.g-contact-card-v2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  border-color: #00d4ff;
+}
+
+/* Photo circulaire plus grande */
+.g-contact-photo-v2 {
+  width: 140px;  /* Agrandie de 90px à 140px */
+  height: 140px;
+  margin-bottom: 20px;  /* Espacement augmenté */
+  overflow: hidden;
+  border-radius: 50%;
+  border: 4px solid #f0f0f0;  /* Bordure plus épaisse */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Image dans la photo */
+.g-contact-photo-v2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Nom plus grand et plus visible */
+.g-contact-card-v2 strong {
+  font-size: 1.8rem;  /* Agrandi de 1.15rem à 1.4rem */
+  color: #2c3e50;
+  margin-bottom: 8px;
+  font-weight: 600;  /* Plus gras */
+}
+
+/* Rôle plus lisible */
+.g-contact-role-v2 {
+  font-size: 1.5rem;  /* Agrandi de 0.9rem à 1.05rem */
+  color: #555;
+  margin-bottom: 12px;
+}
+
+/* Email plus visible */
+.g-contact-email-v2 {
+  color: #2563EB;
+  text-decoration: none;
+  font-size: 1.6rem;  /* Agrandi de 0.9rem à 1rem */
+  transition: color 0.2s;
+  font-weight: 500;
+  font-style: bold;
+}
+
+.g-contact-email-v2:hover {
+  color: #00a8cc;
+  text-decoration: underline;
+}
+
+/* ===== FIN DES NOUVEAUX STYLES ===== */  

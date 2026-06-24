@@ -14,16 +14,17 @@ import '@girder/core/stylesheets/body/frontPage.styl';
 
 const PROJECT = {
     "title": "SMART-HEAT",
-    "subtitle": "Spatial Mapping and Analysis of Real-time MRI Thermometry for Highly Efficient liver tumor Ablation using inverse Thermal modelling",
-    "short": "Combining experimental MR-based temperature mapping and an inverse modeling approach for visualizing the thermal response.",
+    "subtitle": "The world’s most advanced, AI-enabled DIGITAL TWIN OF THERMAL ABLATION for image-guided liver ablations.",
+    "short": "Spatial Mapping and Analysis of Real-time MRI Thermometry for Highly Efficient liver tumor Ablation using inverse Thermal modelling. Combining experimental MR-based temperature mapping and an inverse modeling approach for visualizing the thermal response.",
     "icon": "🔥",
     "logo": "/project-logos/smart_it.png",
     "themeClass": "g-smartit-theme",
     "anr": "ANR-24-CE92-0073",
     "anrLink": "https://anr.fr/Projet-ANR-24-CE92-0073",
+    "appLink": "https://incredible-App-For-Thermoablation-Planning",
     "grant": "Projet-ANR-24-CE92-0073",
-    "duration": "2025-2027",
-    "coordinator": "Max Seidensticker / Jean-Luc Battaglia",
+    "duration": "January 2024 - 36 months",
+    "coordinator": "Max Seidensticker - Jean-Luc Battaglia",
     "about": "SMART-HEAT is a multidisciplinary project involving teams in Munich and Bordeaux with complementary expertise in interventional radiology, MRI thermometry, and inverse thermal modeling.",
     "mission": "SMART-HEAT aims at providing an objective therapeutic end-point based on quantitative, rapid, and spatially resolved thermal imaging.",
     "partners": [        
@@ -53,14 +54,19 @@ const PROJECT = {
             "logo": "/project-logos/cnrs.png"
         },
         {
-            "name": "ANR / France 2030",
-            "role": "Agence nationale de la recherche",
-            "logo": "/project-logos/france2030.jpg"
+            "name": "ANR",
+            "role": "Agence Nationale de la Recherche",
+            "logo": "/project-logos/anr.jpg"
         },
         {
             "name": "DFG",
             "role": "Deutsche Forschungsgemeinschaft",
             "logo": "/project-logos/DFG.png"
+        },
+        {
+            "name": "France 2023",
+            "role": "",
+            "logo": "/project-logos/Logo_France_2030.png"
         }
 
     ],
@@ -75,21 +81,20 @@ const PROJECT = {
             "title": "MRI workflow ",
             "text": "  "
         },
-             
+        {
+            "icon": "🎯",
+            "title": "Personalised data integration",
+            "text": "Unprecedented anatomical details of tissue and structural characteristics from numerical rendered 3D liver models built with dedicated segmentation algorithm that analyzes CT and MR images."
+        },
+        {
+            "icon": "💻 + 🌡️",
+            "title": "Numerical thermal simulation",
+            "text": "An in-depth understanding of thermal properties for unrivalled precisionOne base system adapted to multiple research projects."
+        },             
         {
             "icon": "🗂️",
             "title": "Data organization",
             "text": "Manage files, collections and project workspaces."
-        },
-        {
-            "icon": "🤖",
-            "title": "Personalized data integration ",
-            "text": "Prepare data and workflows using advanced processing tools."
-        },
-        {
-            "icon": "💻",
-            "title": "Numerical thermal simulation",
-            "text": "One base system adapted to multiple research projects."
         },
         {
             "icon": "🛠️",
@@ -109,16 +114,16 @@ const PROJECT = {
     ],
     "work": [
         {
-            "title": "Frontend templating",
-            "text": "Select a project interface with PROJECT_TEMPLATE."
+            "title": "",
+            "text": ""
         },
         {
-            "title": "Visualization integration",
-            "text": "Prepare entry points for Trame, ParaView and analysis tools."
+            "title": "Pre-planning thermal modeling",
+            "text": "Get ready for your next ablation."
         },
         {
-            "title": "Shared foundation",
-            "text": "Keep one Girder base with project-specific UI layers."
+            "title": "Real-time thermal modeling for surgical procedure ",
+            "text": "An augmented visualisation of your procedure."
         }
     ]
 };
@@ -232,21 +237,21 @@ const FrontPageView = View.extend({
 
                     <section class="g-hero">
                         <div>
-                            <span class="g-hero-kicker">${PROJECT.icon} ${PROJECT.anr}</span>
+                            <!-- <span class="g-hero-kicker">${PROJECT.icon} ${PROJECT.anr} </span> -->
                             <h1>${PROJECT.title}</h1>
                             <p>${PROJECT.subtitle}</p>
                             <div class="g-hero-buttons">
-                                <button class="g-hero-button g-access-platform-btn">${translate('Access the platform')}</button>
                                 <a class="g-hero-button g-hero-button-alt" href="${PROJECT.anrLink}" target="_blank" rel="noreferrer">${translate('Learn More')}</a>
+                                <button class="g-hero-button g-access-platform-btn">${translate('Access the database ')}</button>
+                                <a class="g-hero-button g-hero-button-alt" href="${PROJECT.appLink}" target="_blank" rel="noreferrer">${translate('Direct access to the planning App ')}</a>
                             </div>
                         </div>
 
                         <aside class="g-hero-card">
                             <img class="g-hero-project-logo" src="${PROJECT.logo}" alt="${PROJECT.title} logo" />
-                            <div class="g-meta-line">🏷️ <span>${PROJECT.anr}</span></div>
-                            <div class="g-meta-line">👤 <span>${PROJECT.coordinator}</span></div>
+                            <div class="g-meta-line">🤝 <span>${PROJECT.coordinator}</span></div>
                             <div class="g-meta-line">📅 <span>${PROJECT.duration}</span></div>
-                            <div class="g-meta-line">💶 <span>${PROJECT.grant}</span></div>
+                            <div class="g-meta-line">💶 <span>${PROJECT.anr }</span></div>
                         </aside>
                     </section>
 
@@ -259,9 +264,13 @@ const FrontPageView = View.extend({
                         <button class="g-carousel-btn g-carousel-prev">&#8249;</button>
                         <div class="g-carousel-track-wrap">
                             <div class="g-carousel-track">
+                                <div class="g-carousel-slide"><img src="/project-images/image0.png" alt="image 0" /></div>
                                 <div class="g-carousel-slide"><img src="/project-images/image1.png" alt="image 1" /></div>
                                 <div class="g-carousel-slide"><img src="/project-images/image2.png" alt="image 2" /></div>
                                 <div class="g-carousel-slide"><img src="/project-images/image3.png" alt="image 3" /></div>
+                                <div class="g-carousel-slide"><img src="/project-images/image4.png" alt="image 4" /></div>
+                                <div class="g-carousel-slide"><img src="/project-images/image5.png" alt="image 5" /></div>
+                                <div class="g-carousel-slide"><img src="/project-images/image6.png" alt="image 6" /></div>
                             </div>
                         </div>
                         <button class="g-carousel-btn g-carousel-next">&#8250;</button>
@@ -269,6 +278,10 @@ const FrontPageView = View.extend({
                             <span class="g-carousel-dot g-dot-active" data-idx="0"></span>
                             <span class="g-carousel-dot" data-idx="1"></span>
                             <span class="g-carousel-dot" data-idx="2"></span>
+                            <span class="g-carousel-dot" data-idx="3"></span>
+                            <span class="g-carousel-dot" data-idx="4"></span>
+                            <span class="g-carousel-dot" data-idx="5"></span>
+                            <span class="g-carousel-dot" data-idx="6"></span>
                         </div>
                     </div>
                     </section>
@@ -287,6 +300,50 @@ const FrontPageView = View.extend({
                         </div>
                     </section>
 
+
+                    <!-- NOUVELLE SECTION AVEC PHOTOS -->
+                    <section class="g-dashboard-section">
+                    <h2>Contacts</h2>
+                    <div class="g-contact-alert">For any questions about the ${PROJECT.title} platform, please contact the project team. </div>
+                    <div class="g-contact-grid-v2">
+                        ${[
+                        { name: "Max Seidensticker", role: "Project Coordinator in Munich", email: "@med.uni-muenchen.de", photo: "max-seidensticker.png" },
+                        { name: "Jean-Luc Battaglia", role: "Project Coordinator in Bordeaux at I2M", email: "@u-bordeaux.fr", photo: "default.png" },
+                        { name: "Olaf Dietrich", role: "Partner in Munich", email: "@med.uni-muenchen.de", photo: "default.png" },
+                        { name: "Valéry Ozenne", role: "Partner in Bordeaux at CRMSB", email: "@u-bordeaux.fr", photo: "default.png" },
+                         
+                        
+                        { name: "Luigi Nardone", role: " in Munich", email: "@med.uni-muenchen.de", photo: "default.png" },
+                        { name: "Vanessa Schmidt", role: " in Munich", email: "@med.uni-muenchen.de", photo: "default.png" },
+                        { name: "Matthias Philipp Fabritius", role: " in Munich", email: "@med.uni-muenchen.de", photo: "default.png" },
+                        { name: "Mingming Wu", role: " in Munich", email: "@med.uni-muenchen.de", photo: "default.png" },
+                        { name: "Laura Bauer", role: "PhD in Munich", email: "@med.uni-muenchen.de", photo: "default.png" },
+                        
+                       
+                        
+                        
+
+                        { name: "Manon Desclides", role: "Post-Doc in Bordeaux", email: "@u-bordeaux.fr", photo: "default.png" },
+                        { name: "Nino Avetikovi", role: "PhD in Bordeaux", email: "@u-bordeaux.fr", photo: "default.png" },
+                        { name: "Ida Burgers", role: "PhD in Bordeaux", email: "@u-bordeaux.fr", photo: "default.png" },
+                        { name: "Mariana De Melo Antunes", role: "PhD in Bordeaux", email: "@u-bordeaux.fr", photo: "default.png" },
+                       
+                        { name: "Eya Ben Amor", role: "Intern in Bordeaux", email: "@u-bordeaux.fr", photo: "default.png" },
+                        { name: "Hippolyte Salles", role: "Intern in Bordeaux", email: "@u-bordeaux.fr", photo: "default.png" },
+                        ].map(contact => `
+                        <div class="g-contact-card-v2">
+                            <div class="g-contact-photo-v2">
+                            <img src="/project-photo/${contact.photo}" alt="${contact.name} photo" onerror="this.src='/project-photo/default.png';">
+                            </div>
+                            <strong>${contact.name}</strong>
+                            ${contact.role ? `<span class="g-contact-role-v2">${contact.role}</span>` : ''}
+                            <a href="mailto:${contact.email}" class="g-contact-email-v2">${contact.email}</a>
+                        </div>
+                        `).join('')}
+                    </div>
+                    </section>
+                    
+                    <!--
                     <section class="g-dashboard-section">
                         <h2>Contacts</h2>
                         <div class="g-contact-alert">
@@ -294,91 +351,15 @@ const FrontPageView = View.extend({
                         </div>
 
                         <div class="g-contact-grid">
-                            <div class="g-contact-card">
-                                <strong>Max Seidensticker</strong>
-                                <span>Project Coordinator in Munich</span>
-                                <a href="mailto:@med.uni-muenchen.de">@med.uni-muenchen.de</a>
-                             </div>
-
-                            <div class="g-contact-card">
-                                <strong>Jean-Luc Battaglia</strong>
-                                <span>Project Coordinator in Bordeaux</span>
-                                <a href="lala@lmu">lala@lmu</a>
-                            </div>
-
-                            <div class="g-contact-card">
-                                <strong>Olaf Dietrich</strong>
-                                <span></span>
-                                <a href="mailto:@med.uni-muenchen.de">@med.uni-muenchen.de</a>
-                            </div>
-
-                            <div class="g-contact-card">
-                                <strong>Valéry Ozenne</strong>
-                                <span></span>
-                                <a href="mailto:@u-bordeaux.fr">support@u-bordeaux.fr</a>
-                            </div>
-
-                            <div class="g-contact-card">
-                                <strong>Luigi Nardone</strong>
-                                <span></span>
-                                <a href="mailto:support@u-bordeaux.fr">support@u-bordeaux.fr</a>
-                            </div>
-
-                            <div class="g-contact-card">
-                                <strong>Mingming Wu</strong>
-                                <span></span>
-                                <a href="mailto:support@u-bordeaux.fr">support@u-bordeaux.fr</a>
-                            </div>
-
-                            <div class="g-contact-card">
-                                <strong>"Matthias PD Fabritius</strong>
-                                <span></span>
-                                <a href="mailto:support@u-bordeaux.fr">support@u-bordeaux.fr</a>
-                            </div>
-
-                            <div class="g-contact-card">
-                                <strong>Laura Bauer </strong>
-                                <span></span>
-                                <a href="mailto:support@u-bordeaux.fr">support@u-bordeaux.fr</a>
-                            </div>
-
-                            <div class="g-contact-card">
-                                <strong>Vannessa </strong>
-                                <span></span>
-                                <a href="mailto:support@u-bordeaux.fr">support@u-bordeaux.fr</a>
-                            </div>
-
-                            <div class="g-contact-card">
-                                <strong>Nino Avetikovi</strong>                                
-                                <a href=PhD Student at CRMSB>PhD Student</a>
-                            </div>
                             
-                            <div class="g-contact-card">
-                                <strong>Ida Burgers</strong>
+                           <div class="g-contact-card">
+                                <strong>Mariana Burgers</strong>
                                 <span></span>
                                 <a href=PhD Student>PhD Student</a>
                             </div>
-
-                            <div class="g-contact-card">
-                                <strong>Manon Desclides</strong>
-                                <span></span>
-                                <a href="mailto:support@u-bordeaux.fr">@u-bordeaux.fr</a>
-                            </div>  
-                            
-                            <div class="g-contact-card">
-                                <strong>Eya </strong>
-                                <span></span>
-                                <a href="mailto:support@u-bordeaux.fr">@u-bordeaux.fr</a>
-                            </div> 
-
-                            <div class="g-contact-card">
-                                <strong>Hippolyte </strong>
-                                <span></span>
-                                <a href="mailto:support@u-bordeaux.fr">@u-bordeaux.fr</a>
-                            </div> 
-
                         </div>
                     </section>
+                   -->   
 
                     <section class="g-section">
                         <div class="g-section-header">
@@ -409,7 +390,7 @@ const FrontPageView = View.extend({
                             <div class="g-section-icon">🏢</div>
                             <h2>${translate('About the platform')}</h2>
                         </div>
-                        <p class="g-section-lead">Girder is a free and open source web-based data management platform, developed by Kitware. We would like to thanks all co-workers from IHU-Liryc and CRMSB that help us to improve the design and tools including: Julien Castelneau, Andony Arriela, Vigneshwar Gurunathan, Eya Ben Amor and the Kitware team in Lyon.</p>
+                        <p class="g-section-lead">We would like to thanks all co-workers from IHU-Liryc and CRMSB that help us to make the online service available: Maxime Sermesant, Julien Castelneau, Andony Arriela and Vigneshwar Gurunathan as well as the Kitware team in Lyon. The current version has been developed by Eya Ben Amor, Henri Valeins and Valéry Ozenne and is based on Girder, a free and open source web-based data management platform, developed by Kitware.</p>
                     </section>
                 </div>
             </div>
@@ -487,7 +468,7 @@ const FrontPageView = View.extend({
     },
 
     _carouselGoTo: function (idx) {
-    const total = 3;
+    const total = 7;
     this._carouselIdx = ((idx % total) + total) % total;
     this.$('.g-carousel-track').css('transform', `translateX(-${this._carouselIdx * 100}%)`);
     this.$('.g-carousel-dot').removeClass('g-dot-active');

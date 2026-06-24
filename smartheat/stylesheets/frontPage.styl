@@ -609,3 +609,85 @@
     width 22px
     border-radius 999px
   
+
+
+
+/* ===== NOUVEAUX STYLES POUR LA SECTION AVEC PHOTOS (AGRANDIS) ===== */
+
+.g-contact-grid-v2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.g-contact-card-v2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 25px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.g-contact-card-v2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  border-color: #00d4ff;
+}
+
+/* Photo circulaire plus grande */
+.g-contact-photo-v2 {
+  width: 140px;  /* Agrandie de 90px à 140px */
+  height: 140px;
+  margin-bottom: 20px;  /* Espacement augmenté */
+  overflow: hidden;
+  border-radius: 50%;
+  border: 4px solid #f0f0f0;  /* Bordure plus épaisse */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Image dans la photo */
+.g-contact-photo-v2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Nom plus grand et plus visible */
+.g-contact-card-v2 strong {
+  font-size: 1.8rem;  /* Agrandi de 1.15rem à 1.4rem */
+  color: #2c3e50;
+  margin-bottom: 8px;
+  font-weight: 600;  /* Plus gras */
+}
+
+/* Rôle plus lisible */
+.g-contact-role-v2 {
+  font-size: 1.5rem;  /* Agrandi de 0.9rem à 1.05rem */
+  color: #555;
+  margin-bottom: 12px;
+}
+
+/* Email plus visible */
+.g-contact-email-v2 {
+  color: #2563EB;
+  text-decoration: none;
+  font-size: 1.6rem;  /* Agrandi de 0.9rem à 1rem */
+  transition: color 0.2s;
+  font-weight: 500;
+  font-style: bold;
+}
+
+.g-contact-email-v2:hover {
+  color: #00a8cc;
+  text-decoration: underline;
+}
+
+/* ===== FIN DES NOUVEAUX STYLES ===== */

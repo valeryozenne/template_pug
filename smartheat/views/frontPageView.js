@@ -17,8 +17,8 @@ const PROJECT = {
     "subtitle": "The world’s most advanced, AI-enabled DIGITAL TWIN OF THERMAL ABLATION for image-guided liver ablations.",
     "short": "Spatial Mapping and Analysis of Real-time MRI Thermometry for Highly Efficient liver tumor Ablation using inverse Thermal modelling. Combining experimental MR-based temperature mapping and an inverse modeling approach for visualizing the thermal response.",
     "icon": "🔥",
-    "logo": "/project-logos/smart_it.png",
-    "themeClass": "g-smartit-theme",
+    "logo": "/project-logos/smartheat.png",
+    "themeClass": "g-smartheat-theme",
     "anr": "ANR-24-CE92-0073",
     "anrLink": "https://anr.fr/Projet-ANR-24-CE92-0073",
     "appLink": "https://incredible-App-For-Thermoablation-Planning",
@@ -435,7 +435,7 @@ const FrontPageView = View.extend({
                             <p>${translate('Collaborate with research teams.')}</p>
                         </a>
 
-                        <a class="g-dashboard-card" href="/trame" target="_blank">
+                        <a class="g-dashboard-card" href="/viewer/girdermedviewer.html" target="_blank">
                             <span>🛠️</span>
                             <h3>Tools</h3>
                             <p>${translate('Launch interactive visualization tools.')}</p>

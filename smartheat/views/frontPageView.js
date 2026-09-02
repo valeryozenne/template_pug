@@ -15,7 +15,7 @@ import '@girder/core/stylesheets/body/frontPage.styl';
 const PROJECT = {
     "title": "SMART-HEAT",
     "subtitle": "The world’s most advanced, AI-enabled DIGITAL TWIN OF THERMAL ABLATION for image-guided liver ablations.",
-    "short": "Spatial Mapping and Analysis of Real-time MRI Thermometry for Highly Efficient liver tumor Ablation using inverse Thermal modelling. Combining experimental MR-based temperature mapping and an inverse modeling approach for visualizing the thermal response.",
+    "short": "Spatial Mapping and Analysis of Real-time MRI Thermometry for Highly Efficient liver tumor Ablation using inverse Thermal modelling.",
     "icon": "🔥",
     "logo": "/project-logos/smartheat.png",
     "themeClass": "g-smartheat-theme",
@@ -25,48 +25,57 @@ const PROJECT = {
     "grant": "Projet-ANR-24-CE92-0073",
     "duration": "January 2024 - 36 months",
     "coordinator": "Max Seidensticker - Jean-Luc Battaglia",
-    "about": "SMART-HEAT is a multidisciplinary project involving teams in Munich and Bordeaux with complementary expertise in interventional radiology, MRI thermometry, and inverse thermal modeling.",
-    "mission": "SMART-HEAT aims at providing an objective therapeutic end-point based on quantitative, rapid, and spatially resolved thermal imaging.",
+    "about": "SMART-HEAT is a multidisciplinary project involving teams in Munich and Bordeaux with complementary expertise in interventional radiology, MRI thermometry, and inverse thermal modeling. ",
+    "mission": "SMART-HEAT aims at providing an objective therapeutic end-point based on quantitative, rapid, and spatially resolved thermal imaging. Visualizing the thermal response in real time, combining experimental MR-based temperature mapping with inverse thermal modeling.",
     "partners": [        
         {
             "name": "Université de Munich",
             "role": "",
-            "logo": "/project-logos/lmu.png"
+            "logo": "/project-logos/lmu.png",
+            "url": "https://www.lmu.de"
         },
         {
             "name": "Université de Bordeaux",
             "role": "",
-            "logo": "/project-logos/universite_bordeaux.png"
+            "logo": "/project-logos/universite_bordeaux.png",
+            "url": "https://www.u-bordeaux.fr"
         },
         {
             "name": "CRMSB",
             "role": "Centre de Résonance Magnétique des Systèmes Biologiques",
-            "logo": "/project-logos/crmsb.png"
+            "logo": "/project-logos/crmsb.png",
+            "url": "https://www.rmsb.u-bordeaux.fr/fr/"
         },
         {
             "name": "I2M",
             "role": "Institut de mécanique et d'ingénierie",
-            "logo": "/project-logos/I2M.jpg"
+            "logo": "/project-logos/I2M.jpg",
+            "url": "www.i2m.u-bordeaux.fr"            
         },
         {
             "name": "CNRS",
             "role": "Centre national de la recherche scientifique",
-            "logo": "/project-logos/cnrs.png"
+            "logo": "/project-logos/cnrs.png",
+            "url": "https://www.cnrs.fr/"
         },
         {
             "name": "ANR",
             "role": "Agence Nationale de la Recherche",
-            "logo": "/project-logos/anr.jpg"
+            "logo": "/project-logos/anr.jpg",
+            "url": "https://www.anr.fr/"
         },
         {
             "name": "DFG",
             "role": "Deutsche Forschungsgemeinschaft",
-            "logo": "/project-logos/DFG.png"
+            "logo": "/project-logos/DFG.png",
+            "url": "https://www.dfg.de/"
         },
         {
             "name": "France 2023",
             "role": "",
-            "logo": "/project-logos/Logo_France_2030.png"
+            "logo": "/project-logos/Logo_France_2030.png",
+            "url": "https://www.info.gouv.fr/grand-dossier/france-2030"
+            
         }
 
     ],
@@ -134,13 +143,13 @@ function languageLabel() {
 
 function partnerCards() {
     return PROJECT.partners.map((partner) => `
-        <div class="g-partner-card">
+        <a class="g-partner-card" href="${partner.url}" target="_blank" rel="noopener noreferrer">
             <div class="g-partner-logo-wrap">
                 <img class="g-partner-logo" src="${partner.logo}" alt="${partner.name} logo" />
             </div>
             <strong>${partner.name}</strong>
             <span>${partner.role}</span>
-        </div>
+        </a>
     `).join('');
 }
 
@@ -224,7 +233,7 @@ const FrontPageView = View.extend({
                             <img class="g-brand-logo" src="${PROJECT.logo}" alt="${PROJECT.title} logo" />
                             <div>
                                 <h1 class="g-brand-title">${PROJECT.title}</h1>
-                                <p class="g-brand-subtitle">${PROJECT.short}</p>
+                                <p class="g-brand-subtitle">${translate(PROJECT.short)}</p>
                             </div>
                         </div>
 
@@ -239,11 +248,11 @@ const FrontPageView = View.extend({
                         <div>
                             <!-- <span class="g-hero-kicker">${PROJECT.icon} ${PROJECT.anr} </span> -->
                             <h1>${PROJECT.title}</h1>
-                            <p>${PROJECT.subtitle}</p>
+                            <p>${translate(PROJECT.subtitle)}</p>
                             <div class="g-hero-buttons">
                                 <a class="g-hero-button g-hero-button-alt" href="${PROJECT.anrLink}" target="_blank" rel="noreferrer">${translate('Learn More')}</a>
-                                <button class="g-hero-button g-access-platform-btn">${translate('Access the database ')}</button>
-                                <a class="g-hero-button g-hero-button-alt" href="${PROJECT.appLink}" target="_blank" rel="noreferrer">${translate('Direct access to the planning App ')}</a>
+                                <button class="g-hero-button g-access-platform-btn">${translate('Access the database')}</button>
+                                <a class="g-hero-button g-hero-button-alt" href="${PROJECT.appLink}" target="_blank" rel="noreferrer">${translate('Direct access to the planning App')}</a>
                             </div>
                         </div>
 
@@ -292,7 +301,7 @@ const FrontPageView = View.extend({
                             <div class="g-section-icon">📌</div>
                             <h2>${translate('Project overview')}</h2>
                         </div>
-                        <p class="g-section-lead">${PROJECT.about}</p>
+                        <p class="g-section-lead">${translate(PROJECT.about)}</p>
                         <div class="g-info-grid">
                             <div class="g-info-pill"><strong>Mission</strong><span>${PROJECT.mission}</span></div>
                             <div class="g-info-pill"><strong>Objective 1</strong><span>Improve the planning of thermal ablation therapy and the optimization and personalization of device settings by providing personalized modeling of the temperature field prior to ablation.</span></div>

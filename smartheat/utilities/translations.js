@@ -1,10 +1,12 @@
 const translations = {
-    french: {
+    french: {        
         'Login': 'Connexion',
         'Sign up': 'Créer un compte',
-        'Access the platform': 'Accéder à la plateforme',
+        'Access the database': 'Accéder aux données',
         'Learn More': 'En savoir plus',
+        'Direct access to the planning App': 'Accéder à l application',
         'Welcome to': 'Bienvenue sur',
+        'Gallery': 'Gallerie',
         'Hello': 'Bonjour',
         'My data': 'Mes données',
         'Collections': 'Collections',
@@ -19,7 +21,8 @@ const translations = {
         'Consortium & partners': 'Consortium & partenaires',
         'Research workpackages': 'Axes de travail',
         'About the platform': 'À propos de la plateforme',
-        'SMART-HEAT is a multidisciplinary project involving teams in Munich and Bordeaux with complementary expertise in interventional radiology, MRI thermometry, and inverse thermal modeling.': 'ceci est une descritpion du projet en français'
+        'SMART-HEAT is a multidisciplinary project involving teams in Munich and Bordeaux with complementary expertise in interventional radiology, MRI thermometry, and inverse thermal modeling.': 'SMART-HEAT est un projet multidisciplinaire impliquant des équipes à Munich et à Bordeaux, avec des expertises complémentaires en radiologie interventionnelle, thermométrie par IRM et modélisation thermique inverse.',
+        'The world’s most advanced, AI-enabled DIGITAL TWIN OF THERMAL ABLATION for image-guided liver ablations.': 'Le JUMEAU NUMÉRIQUE D ABLATION THERMIQUE le plus avancé au monde, propulsé par l IA, pour les ablations hépatiques guidées par imagerie.'
     },
     german: {
         'Login': 'Anmelden',
@@ -41,7 +44,8 @@ const translations = {
         'Consortium & partners': 'Konsortium & Partner',
         'Research workpackages': 'Arbeitspakete',
         'About the platform': 'Über die Plattform',
-        'SMART-HEAT is a multidisciplinary project involving teams in Munich and Bordeaux with complementary expertise in interventional radiology, MRI thermometry, and inverse thermal modeling.': 'ceci est une descritpion du projet en allemande'
+        'SMART-HEAT is a multidisciplinary project involving teams in Munich and Bordeaux with complementary expertise in interventional radiology, MRI thermometry, and inverse thermal modeling.': 'SMART-HEAT ist ein interdisziplinäres Projekt mit Teams in München und Bordeaux, die über sich ergänzende Expertise in interventioneller Radiologie, MRT-Thermometrie und inverser thermischer Modellierung verfügen.',
+        'The world’s most advanced, AI-enabled DIGITAL TWIN OF THERMAL ABLATION for image-guided liver ablations.': 'Der weltweit fortschrittlichste, KI-gestützte DIGITALE ZWILLING DER THERMOABLATION für bildgesteuerte Leberablationen.'
     }
 };
 
